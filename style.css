@@ -1,0 +1,234 @@
+/* --- Variáveis de Cores (TEMA ROSA) --- */
+:root {
+    --cor-primaria: #ff6b81; /* Rosa Vibrante */
+    --cor-secundaria: #fff0f5; /* Rosa Lavanda (Fundo bem claro) */
+    --cor-texto: #4a4a4a;    /* Cinza escuro para texto (melhor leitura) */
+    --cor-destaque: #882d60; /* Framboesa/Vinho (Para títulos) */
+    --sombra: 0 4px 15px rgba(255, 105, 180, 0.2); /* Sombra levemente rosada */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--cor-secundaria);
+}
+
+nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem; /* Aumentei um pouco */
+    font-weight: 800;
+    color: var(--cor-primaria);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Georgia', serif; /* Fonte mais clássica para "Confeitaria" */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--cor-primaria);
+}
+
+/* Estrutura Geral */
+section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    color: var(--cor-destaque);
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero {
+    /* Imagem com sobreposição rosa */
+    background: linear-gradient(rgba(136, 45, 96, 0.4), rgba(136, 45, 96, 0.4)), url('https://images.unsplash.com/photo-1557925923-cd4648e211a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 0 0 50px 50px; /* Borda arredondada no fundo do banner */
+}
+
+.hero h1 { 
+    font-size: 3.5rem; 
+    margin-bottom: 0.5rem; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.hero p { 
+    font-size: 1.3rem; 
+    margin-bottom: 2rem; 
+    font-weight: 400; 
+}
+
+.btn {
+    padding: 12px 35px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 50px; /* Botão bem redondo */
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 107, 129, 0.4);
+}
+
+.btn:hover { 
+    background-color: var(--cor-destaque);
+    transform: translateY(-3px);
+}
+
+/* Sobre */
+.grid-duplo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.sobre-img {
+    background: url('https://images.unsplash.com/photo-1516919549054-e08258825f80?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover;
+    min-height: 350px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+}
+
+/* Ingredientes */
+.bg-rosa { background-color: white; border-radius: 20px; box-shadow: var(--sombra); }
+
+.ingredientes-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card-ingrediente {
+    padding: 1rem;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+}
+
+.emoji-icon { font-size: 3rem; display: block; margin-bottom: 1rem; }
+
+/* Menu */
+.menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.produto-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    width: 350px;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ffe4e1; /* Borda rosa bem clarinha */
+}
+
+.produto-card:hover { transform: translateY(-10px); }
+
+.produto-img {
+    height: 250px;
+    background-color: #ffe4e1;
+    background-size: cover;
+    background-position: center;
+}
+
+.produto-info {
+    padding: 2rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-info h3 { 
+    color: var(--cor-destaque); 
+    margin-bottom: 0.5rem; 
+    font-size: 1.6rem; 
+}
+.produto-desc { font-size: 0.95rem; color: #666; margin-bottom: 1.5rem; }
+
+.preco {
+    display: block;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--cor-destaque);
+    color: white;
+    text-align: center;
+    padding: 3rem;
+    margin-top: auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .grid-duplo { grid-template-columns: 1fr; gap: 2rem; }
+    .hero h1 { font-size: 2.5rem; }
+}
